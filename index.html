@@ -24,7 +24,7 @@
   <!-- Rating state start -->
 
 
-  <div class="scorecard">
+  <form class="scorecard">
     <img src="images/icon-star.svg" alt="star" class="starIcon">
     <h2>How did we do?</h2>
     <p class="feedback">
@@ -32,20 +32,20 @@
       to help us improve our offering!
     </p>
     <div>
-      <form action="" class="scale">
-        <button class="ratings">1</button>
-        <button class="ratings">2</button>
-        <button class="ratings">3</button>
-        <button class="ratings">4</button>
-        <button class="ratings">5</button>
-      </form>
+      <div class="scale">
+        <button class="ratings" type="button" value="1">1</button>
+        <button class="ratings" type="button" value="2">2</button>
+        <button class="ratings" type="button" value="3">3</button>
+        <button class="ratings" type="button" value="4">4</button>
+        <button class="ratings" type="button" value="5">5</button>
+      </div>
     </div>
 
     <div>
-      <button type="submit" class="entry">Submit</button>
+      <button type="submit" class="entry">SUBMIT</button>
     </div>
 
-  </div>
+  </form>
 
   <!-- Rating state end -->
 
@@ -65,6 +65,37 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Javier Rodriguez</a>. -->
   </div>
+
+  <script>
+    function hello() {
+      console.log("Hello world!")
+
+    }
+    function changeButtonState(event) {
+      let x = value;
+      console.log(event);
+    }
+    // const button2 = document.getElementById("button-2")
+    // button2.addEventListener("click", (event) => {
+    //   console.log(event.target.value)
+    // })
+    
+    //Puts buttons into an array that has the ratings class
+    const buttons = document.querySelectorAll(".ratings")
+    console.log(buttons)
+
+    let buttonState
+
+    for (const button of buttons) {
+      button.addEventListener("click", (event) => {
+        buttonState = event.target.value;
+        console.log(buttonState);
+      })
+    }
+
+    
+
+  </script>
 </body>
 
 </html>

@@ -9,6 +9,7 @@
 
 html {
     height: 100%;
+    font-family: 'Overpass', sans-serif;
 }
 
 body{
@@ -21,9 +22,11 @@ body{
 
 .scorecard {
     background-color: var(--blue);
-    border-radius: 2em;
-    padding: 1.5em;
+    border-radius: 1em;
+    padding: 1em;
     margin: 1em;
+    /* background-image: radial-gradient( circle farthest-corner at 50% 10%, rgba(100, 100, 255, 0.089), transparent); */
+
 }
 
 .starIcon {
@@ -48,13 +51,14 @@ p {
 }
 
 .feedback {
-    padding: 1em;
+    /* padding: 1em; */
 
 }
 
 .scale {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1.5em;
 }
 
 .ratings {
@@ -64,6 +68,8 @@ p {
     border-radius: 100%;
     border: none;
     padding: 1em;
+    height: 3em;
+    width: 3em;
 
 }
 
@@ -75,4 +81,7 @@ p {
     border-radius: 2em;
     width: 100%;
     padding: 1em 0;
+    font-weight:700;
+    letter-spacing: .1em;
+
 }
