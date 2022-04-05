@@ -1,0 +1,78 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lGrey: hsl(217, 12%, 63%);
+    --mGrey: hsl(216, 12%, 54%);
+    --blue: hsl(213, 19%, 18%);
+    --dBlue: hsl(216, 12%, 8%);
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-color: var(--dBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scorecard {
+    background-color: var(--blue);
+    border-radius: 2em;
+    padding: 1.5em;
+    margin: 1em;
+}
+
+.starIcon {
+    
+    border-radius: 100%;
+    background-color: hsl(216, 12%, 54%, 10%);
+    padding: 1em;
+}
+
+h2, p {
+    font-family: 'Overpass', sans-serif;
+}
+
+h2{
+    color: var(--white);
+    margin: 1em 0px 0px 0px;
+}
+
+p {
+    font-size: 15px;
+    color: var(--lGrey);
+}
+
+.feedback {
+    padding: 1em;
+
+}
+
+.scale {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ratings {
+    font-family: 'Overpass', sans-serif;
+    color: var(--lGrey);
+    background-color: hsl(216, 12%, 54%, 10%);
+    border-radius: 100%;
+    border: none;
+    padding: 1em;
+
+}
+
+.entry {
+    background-color: var(--orange);
+    color: var(--white);
+    font-family: 'Overpass', sans-serif;
+    border: none;
+    border-radius: 2em;
+    width: 100%;
+    padding: 1em 0;
+}
