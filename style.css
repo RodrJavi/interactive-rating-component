@@ -7,6 +7,14 @@
     --dBlue: hsl(216, 12%, 8%);
 }
 
+input[type = "radio"]{
+    display: none;
+    }
+    input[type="radio"]:checked+label {
+      background-color: #bbb;
+      color: var(--white);
+    }
+
 html {
     height: 100%;
     font-family: 'Overpass', sans-serif;
@@ -63,14 +71,25 @@ p {
 
 .ratings {
     font-family: 'Overpass', sans-serif;
+    font-weight: 700;
     color: var(--lGrey);
     background-color: hsl(216, 12%, 54%, 10%);
     border-radius: 100%;
     border: none;
     padding: 1em;
-    height: 3em;
-    width: 3em;
+    height: 1em;
+    width: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+
+
+.ratings:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
 }
 
 .entry {
@@ -84,4 +103,34 @@ p {
     font-weight:700;
     letter-spacing: .1em;
 
+}
+
+.entry:hover {
+    color: var(--orange);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.thanksCard {
+    padding-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirmation {
+    background-color: hsl(216, 12%, 54%, 10%);
+    color: var(--orange);
+    border-radius: 2em;
+    padding: .75em;
+}
+
+.receipt {
+    display: flex;
+    justify-content: center;
+}
+
+.appreciation {
+    text-align: center;
+    padding-bottom: .75em;
 }
