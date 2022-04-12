@@ -25,7 +25,7 @@
 
 
   <div class="scorecard">
-    <form id="rating-form" style="display: none;">
+    <form id="rating-form"  style="display: block;">
       <img src="images/icon-star.svg" alt="star" class="starIcon">
       <h2>How did we do?</h2>
       <p class="feedback">
@@ -34,11 +34,6 @@
       </p>
       <div>
         <div class="scale">
-          <!-- <button class="ratings" type="button" value="1">1</button>
-          <button class="ratings" type="button" value="2">2</button>
-          <button class="ratings" type="button" value="3">3</button>
-          <button class="ratings" type="button" value="4">4</button>
-          <button class="ratings" type="button" value="5">5</button> -->
           <input type="radio" name="score" value="1" id="one">
           <label for="one" class="ratings">1</label>
           <input type="radio" name="score" value="2" id="two">
@@ -55,12 +50,15 @@
         <button type="submit" class="entry">SUBMIT</button>
       </div>
     </form>
-    <div class="thanksCard" id="thank-message">
+
+    <!-- Thank you state start -->
+
+    <div class="thanksCard" id="thank-message" style="display: none;">
       <div class="receipt">
         <img src="images/illustration-thank-you.svg" alt="Thank you phone image">
       </div>
-      <p class="confirmation">You selected _ out of 5</p>
-      <h2>Thank you!</h2>
+      <p class="confirmation" id="confirmation"></p>
+      <h2 class="ty">Thank you!</h2>
       <p class="appreciation">
         We appreciate you taking the time to give a rating. If you ever need more support,
         don’t hesitate to get in touch!
@@ -68,55 +66,20 @@
     </div>
   </div>
 
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  <!-- You selected -->
-  <!-- Add rating here  out of 5-->
-
-  <!-- Thank you! -->
-
-  <!--  -->
-
-  <!-- Thank you state end -->
-
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Javier Rodriguez</a>. -->
   </div>
 
   <script>
-    // function hello() {
-    //   console.log("Hello world!")
-
-    // }
-    // function changeButtonState(event) {
-    //   let x = value;
-    //   console.log(event);
-    // }
-    // const button2 = document.getElementById("button-2")
-    // button2.addEventListener("click", (event) => {
-    //   console.log(event.target.value)
-    // })
-
-    //Puts buttons into an array that has the ratings class
-    // const buttons = document.querySelectorAll(".ratings")
-    // console.log(buttons)
-
-    // let buttonState
-
-    // for (const button of buttons) {
-    //   button.addEventListener("click", (event) => {
-    //     buttonState = event.target.value;
-    //     console.log(buttonState);
-    //   })
-    // }
 
     function submitForm(event) {
       let { score } = Object.fromEntries(new FormData(event.target))
       console.log(score);
       event.preventDefault();
+      document.getElementById('confirmation').innerHTML = "You selected " + score + " out of 5";
+      document.getElementById('rating-form').style.display = "none";
+      document.getElementById('thank-message').style.display = "flex";
     }
 
     const ratingForm = document.getElementById("rating-form");

@@ -7,20 +7,23 @@
     --dBlue: hsl(216, 12%, 8%);
 }
 
-input[type = "radio"]{
+input[type="radio"] {
     display: none;
-    }
-    input[type="radio"]:checked+label {
-      background-color: #bbb;
-      color: var(--white);
-    }
+}
+
+input[type="radio"]:checked+label {
+    background-color: #bbb;
+    color: var(--white);
+}
 
 html {
     height: 100%;
     font-family: 'Overpass', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
-body{
+body {
     height: 100%;
     background-color: var(--dBlue);
     display: flex;
@@ -38,19 +41,21 @@ body{
 }
 
 .starIcon {
-    
+
     border-radius: 100%;
     background-color: hsl(216, 12%, 54%, 10%);
     padding: 1em;
 }
 
-h2, p {
+h2,
+p {
     font-family: 'Overpass', sans-serif;
 }
 
-h2{
+h2 {
     color: var(--white);
-    margin: 1em 0px 0px 0px;
+    font-weight: 700px;
+
 }
 
 p {
@@ -100,7 +105,7 @@ p {
     border-radius: 2em;
     width: 100%;
     padding: 1em 0;
-    font-weight:700;
+    font-weight: 700;
     letter-spacing: .1em;
 
 }
@@ -128,9 +133,27 @@ p {
 .receipt {
     display: flex;
     justify-content: center;
+    padding-bottom: 1em;
 }
 
 .appreciation {
     text-align: center;
     padding-bottom: .75em;
+}
+
+.ty {
+    padding-top: .75em;
+    margin: 0;
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        max-width: 400px;
+    }
+
+    .scorecard {
+        margin: 0;
+        border-radius: 1.5em;
+        padding: 2em;
+    }
 }
