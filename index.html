@@ -66,18 +66,13 @@
     </div>
   </div>
 
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Javier Rodriguez</a>. -->
-  </div>
-
   <script>
 
     function submitForm(event) {
       let { score } = Object.fromEntries(new FormData(event.target))
-      console.log(score);
       event.preventDefault();
-      document.getElementById('confirmation').innerHTML = "You selected " + score + " out of 5";
+      document.getElementById('confirmation').innerHTML = "You selected " + score +
+       " out of 5";
       document.getElementById('rating-form').style.display = "none";
       document.getElementById('thank-message').style.display = "flex";
     }
